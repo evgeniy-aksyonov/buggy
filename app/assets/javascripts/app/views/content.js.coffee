@@ -4,11 +4,15 @@ class App.Views.Content extends Backbone.View
 	template: HandlebarsTemplates['app/templates/content']
 
 	render: ->
-		$(@el).html(@template())
+		@$el.html(@template())
 		@renderEmptyView()
+		@renderProjectsView()
 		@
 
 	renderEmptyView: ->
 		v = new App.Views.Empty()
 		@$('#main-area').html(v.render().el)
 		
+	renderProjectsView: ->
+		v = new App.Views.Projects()
+		@$('#sidebar-area').html(v.render().el)

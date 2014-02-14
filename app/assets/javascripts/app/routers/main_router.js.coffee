@@ -13,6 +13,7 @@ class App.Routers.MainRouter extends Backbone.Router
 		@layoutViews()
 
 	project: ->
+		@layoutViews()
 
 	layoutViews: ->
 		$('#header').html(@headerView.render().el)
